@@ -708,10 +708,4 @@ def main():
     application.run_polling(poll_interval=1.0, timeout=30)
 
 if __name__ == '__main__':
-    import asyncio
-    try:
-        asyncio.run(main())
-    except RuntimeError:
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
-        main()
+    main()
